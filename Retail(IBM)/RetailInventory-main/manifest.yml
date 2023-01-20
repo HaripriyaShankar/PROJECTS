@@ -1,0 +1,5 @@
+applications:
+ - name: Retail Inventory Flask
+   random-route: true
+   memory: 1024M
+   disk-quota:1.5G
