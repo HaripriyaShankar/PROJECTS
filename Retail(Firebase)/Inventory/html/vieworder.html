@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html class="viewpage" lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>VIEW BILLS</title>
+    <style>
+      body,
+      html {
+        background-color: black;
+      }
+      .cont {
+        position: absolute;
+        height: 150px;
+        width: 400px;
+        left: 50vw;
+        top: 50vh;
+        transform: translate(-50%, -50%);
+        background-color: #ffbcfe;
+        padding: 10px;
+        border-style: solid;
+        border-color: blanchedalmond;
+      }
+      .btn {
+        width: 100px;
+        height: 50px;
+        border-radius: 25%;
+        border-color: black;
+        border-style: solid;
+        background-color: rgb(255, 147, 248);
+        position: absolute;
+        top: 15vh;
+        left: 12vw;
+      }
+
+      .btn:hover {
+        background-color: rgb(247, 31, 164);
+      }
+
+      .common {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+      }
+      .choice {
+        width: 200px;
+        margin-left: 20px;
+        height: 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="cont">
+      <form id="viewbill">
+        <br />
+        <label
+          style="
+            font-family: Comic Sans MS, Comic Sans, cursive;
+            font-weight: bolder;
+            color: black;
+          "
+          >VIEW BILLS BY</label
+        >
+        <select name="choice" class="choice" id="choice" onchange="viewbill()">
+          <option value="select">Select</option>
+          <option value="date">Date</option>
+          <option value="custname">Customer name</option>
+          <option value="amt">Amount</option>
+        </select>
+      </form>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firebase.js"></script>
+    <script src="../js/viewbill.js"></script>
+  </body>
+</html>
